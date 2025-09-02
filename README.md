@@ -1,7 +1,7 @@
-#PROJET SV 2021 : «Fourmis : simulation d'un système auto-organisé»
+# PROJET SV 2021 : «Fourmis : simulation d'un système auto-organisé»
 
-##groupe 31 Charlotte Daumal et Clémence Kiehl
-##coach: Aline Brunner
+## groupe 31 Charlotte Daumal et Clémence Kiehl
+## coach: Aline Brunner
 
 
  
@@ -10,7 +10,7 @@ Dans le cadre notre modélisation nous étudions le comportement de 2 types de f
 
 La simulation a donc pour but final d’illustrer l’auto-organisation d’une colonie de fourmis et son adaptation à l’environnement.
 
-##COMPILATION ET EXECUTION :
+## COMPILATION ET EXECUTION :
 
 Ce projet utilise CMake pour compiler 
 
@@ -22,7 +22,7 @@ dans QTCreator:
     - mise en place du projet : ouvrir le fichier src/CmakeLists.txt
     - choisir la cible à exécuter
 
-##CIBLES PRINCIPALES : 
+## CIBLES PRINCIPALES : 
 
 * application -> correspond à l’application finale.
 
@@ -39,7 +39,7 @@ dans QTCreator:
 * foodTest -> permet de voir apparaître spontanément des sources de nourriture dans l’environnement 
 
 
-##COMMANDES :
+## COMMANDES :
 
 * touche **'C'** -> permet d'affecter la température minimale(-10C) à l'environnement
 * touche **'D'** -> permet de mettre la simulation en mode debug
@@ -64,7 +64,7 @@ dans QTCreator:
 Le codage du projet a été réalisé en adéquation avec l’énoncé du projet.
 **
 
-##EXTENSIONS :
+## EXTENSIONS :
 
 Nous avons élaboré une extension permettant de **réduire la taille de la nourriture** et de la faire changer de texture en dessous d'une quantité seuil (on la considère comme déshydratée)
 
