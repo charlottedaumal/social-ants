@@ -5,7 +5,8 @@
 **Language:** C++  
 **Date:** June 2021
 
-> 📣 NOTE: This project's documentation files (`.md` format) are written in french since the whole course was taught in french.
+> [!WARNING]
+> This project's documentation files (`.md` format) are written in french since the whole course was taught in french.
 
 ---
 
