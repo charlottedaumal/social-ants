@@ -1,4 +1,4 @@
-# JOURNAL
+# Journal de Réponses aux Questions Théoriques
 
 ---
 
