@@ -1,6 +1,6 @@
 # Les Fourmis : Simulation d'un Système Auto-Organisé
 
-**Authors:** Charlotte Daumal & Clémence Kiehl  
+**Authors:** Charlotte Daumal & Clemence Kiehl  
 **Context:** This project was completed as part of the *Programmation Orienté Objet* course taught by Prof. Jamila Sam at EPFL  
 **Language:** C++  
 **Date:** June 2021
@@ -98,4 +98,4 @@ On a aussi fait en sorte que la **température ait une influence sur l'environne
 ## License
 
 This project is for educational purposes.  
-Content © Charlotte Daumal & Clémence Kiehl. Academic use only.
+Content © Charlotte Daumal & Clemence Kiehl. Academic use only.
