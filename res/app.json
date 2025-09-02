@@ -1,0 +1,133 @@
+{
+    "debug" : false,
+    "display probabilities" : false,
+    "simulation":{
+      "time":{
+         "factor": 0.2,
+         "max dt":0.05,
+	  "fixed step" : 0.01
+      },
+    "day background" : "ground3.png",
+	"debug background" : "sand.png",
+    "night background" : "night.png",
+    "snow background"  : "snow.png",
+    "fire background"  : "fire.png",
+    "day cycle delay" : 5,
+    "high temperature" : 35,
+    "low temperature"  : -10,
+    "usual temperature" : 20,
+    "size"       : 800,
+    "text size"  : 15
+    },
+    "environment": {
+        "beta_d"  : 1.0,
+         "q_zero" : 5.0,
+        "alpha"  : 5,
+	"temperature initial" : 20,
+	"temperature delta" : 1,
+	"temperature min"   : -20,
+	"temperature max"   : 45
+    },
+    "food" : {
+        "generator" : {
+            "delta" : 0.6
+        },
+       "min qty" : 10.0,
+       "max qty" : 40.0,
+       "texture" : "food.png",
+       "deshydrated texture" : "food2.png",
+       "evaporation rate" : 2.5
+    },
+
+    "insecticide" : {
+        "generator" : {
+            "delta" : 1.2
+        },
+        "min qty" : 10.0,
+        "max qty" : 40.0,
+        "evaporation rate" : 2.0,
+        "entity distance perception" : 40.0,
+        "evaporation rate high temperature" : 3.0
+    },
+
+    "map" : "map.json",
+    "pheromone" : {
+        "treshold"         : 1,
+        "evaporation rate" : 2.0,
+	"test density"     : 1,
+    "temperature threshold" : 30,
+    "evaporation rate high temperature" : 3.0
+    },
+    "anthill" : {
+        "spawn delay" : 1,
+    "default worker prob" : 0,
+    "texture"     : "anthill.png",
+    "size" : 70.0
+    },
+    "animal" : {
+	"default speed" : 100.0,
+    "default lifespan" : 500,
+        "next rotation delay" : 0.5,
+	"sight distance" : 20,
+    "default texture" : "green_ant.png",
+    "size" : 30
+    },
+    "ant" : {
+	"speed"  : 100.0,
+    "speed high temperature" : 50,
+        "attack" : {
+            "delay" : 0.5
+        },
+	"smell" : {
+            "distance" : 20.0
+        },
+	"pheromone" : {
+            "density" : 0.09,
+	    "energy"  : 5.0
+        },
+	"max food" : 10.0,
+	"max perception distance" : 30.0,
+	"radius" : 25.0,
+	"worker" : {
+        "hp" : 50,
+        "lifespan" : 10000,
+	    "strength" : 0,
+        "strength high temperature" : 0,
+	    "texture"  : "black_ant2.png"
+	},
+	"soldier" : {
+        "hp" : 100,
+        "lifespan" : 1000,
+	    "strength" : 4,
+        "strength high temperature" : 2,
+	    "texture"  : "red_ant2.png"
+	}
+    },
+    "termite" : {
+	"texture"      : "termite2.png",
+    "hp"           : 70,
+    "lifespan"     : 500,
+	"strength"     : 3,
+    "strength high temperature" : 1,
+	"speed"        : 120.0,
+    "speed high temperature" : 60,
+    "attack delay" : 0.6
+    },
+    "stats" : {
+        "refresh rate" : 1
+    },
+    "window" : {
+        "antialiasing level" : 4,
+        "title" : "INFOSV Simulation",
+        "simulation" : {
+	    "width":500,
+        "height":500
+         },
+        "stats" : { "width" : 200 }
+    },
+    "world" : {
+        "size" : 1000,
+    "map name" : "map1.map",
+    "map saved name" : "map_saved.map"
+    }
+}
