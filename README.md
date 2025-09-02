@@ -1,16 +1,24 @@
-# PROJET SV 2021 : «Fourmis : simulation d'un système auto-organisé»
+# Les Fourmis : Simulation d'un Système Auto-Organisé
 
-## groupe 31 Charlotte Daumal et Clémence Kiehl
-## coach: Aline Brunner
+**Authors:** Charlotte Daumal & Clémence Kiehl
+**Context:** This project was completed as part of the *Programmation Orienté Objet* course taught by Prof. Jamila Sam at EPFL  
+**Language:** C++  
+**Date:** June 2021
 
+> 📣 NOTE: This project's documentation files (`.md` format) are written in french since the whole course was taught in french.
 
+---
+
+## Description
  
- Notre programme est une simulation informatique sur la base d’un modèle constitué d’un monde, de fourmilières et de prédateurs (termites)
+Notre programme est une simulation informatique sur la base d’un modèle constitué d’un monde, de fourmilières et de prédateurs (termites)
 Dans le cadre notre modélisation nous étudions le comportement de 2 types de fourmis: les fourmis ouvrières dont le rôle est de ramener de la nourriture (générée automatiquement) à la fourmilière, et les fourmis soldats qui pourront être engagées dans des combats avec des prédateurs (termites).
 
 La simulation a donc pour but final d’illustrer l’auto-organisation d’une colonie de fourmis et son adaptation à l’environnement.
 
-## COMPILATION ET EXECUTION :
+---
+
+## Compilation & Execution :
 
 Ce projet utilise CMake pour compiler 
 
@@ -22,7 +30,9 @@ dans QTCreator:
     - mise en place du projet : ouvrir le fichier src/CmakeLists.txt
     - choisir la cible à exécuter
 
-## CIBLES PRINCIPALES : 
+---
+
+## Cibles Principale : 
 
 * application -> correspond à l’application finale.
 
@@ -38,8 +48,9 @@ dans QTCreator:
 
 * foodTest -> permet de voir apparaître spontanément des sources de nourriture dans l’environnement 
 
+---
 
-## COMMANDES :
+## Commandes :
 
 * touche **'C'** -> permet d'affecter la température minimale(-10C) à l'environnement
 * touche **'D'** -> permet de mettre la simulation en mode debug
@@ -59,12 +70,15 @@ dans QTCreator:
  
 * touches **PgUp** et **PgDown** -> permettent de basculer sur les différents graph représentant l'évolution de la simulation
 
-##MODIFICATION DE CONCEPTION :
+---
+
+## Modification de Conception :
 
 Le codage du projet a été réalisé en adéquation avec l’énoncé du projet.
-**
 
-## EXTENSIONS :
+---
+
+## Extensions :
 
 Nous avons élaboré une extension permettant de **réduire la taille de la nourriture** et de la faire changer de texture en dessous d'une quantité seuil (on la considère comme déshydratée)
 
@@ -77,5 +91,10 @@ On a aussi fait en sorte que la **température ait une influence sur l'environne
  Par conséquent, les fourmis ouvrières qui collectent de la nourriture contaminée meurent et les fourmilières exposées diminuent en taille puis disparaissent.
  
  Enfin nous avons mis en place un **cycle Jour/Nuit** au moyen du type énuméré. Toutes les 5secondes de simulation, le cycle change et le fond de l'environnement se modifie en conséquence.
- 
 
+---
+
+## License
+
+This project is for educational purposes. 
+Content © Charlotte Daumal & Clémence Kiehl. Academic use only.
