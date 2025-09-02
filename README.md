@@ -97,5 +97,5 @@ On a aussi fait en sorte que la **température ait une influence sur l'environne
 
 ## License
 
-This project is for educational purposes. 
+This project is for educational purposes.  
 Content © Charlotte Daumal & Clémence Kiehl. Academic use only.
