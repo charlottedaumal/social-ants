@@ -29,12 +29,11 @@ Ce projet utilise **CMake** pour la compilation. Vous pouvez compiler le code so
    
 2. Compilez la cible souhaitée avec
 
-   ```make <nom_de_la_cible>```
+   ```bash
+   make <nom_de_la_cible>```
 
 ### Compilation avec QT Creator  
-1. Ouvrez le fichier suivant pour configurer le projet :
-
-```src/CMakeLists.txt```
+1. Ouvrez le fichier suivant pour configurer le projet : `src/CMakeLists.txt`
 
 2. Sélectionnez la cible à exécuter directement dans l’interface de QtCreator.
 
@@ -42,63 +41,69 @@ Ce projet utilise **CMake** pour la compilation. Vous pouvez compiler le code so
 
 ## 🎯 Cibles Principales   
 
-* application -> correspond à l’application finale.
+Le projet inclut plusieurs exécutables permettant de tester individuellement différents composants de la simulation :
 
-* enemyTest-> permet de tester les affrontements entre fourmis et prédateurs
-
-* termiteTest -> permet de créer dans l’environnement de simulation une termite au moyen de la touche ’T'
-
-* pheromoneTest -> permet de créer un chemin de phéromones dans le cercle olfactif de la fourmi témoin et d’observer l’affichage des phéromones perçues par celle-ci après que l’on ait appuyé sur la touche ‘Q’
-
-* anthillTest -> fait apparaitre les fourmilières et leurs fourmis. On peut remarquer que les fourmis ouvrières parviennent à ramener de la nourriture à leur fourmilière en suivant les traces de phéromones. 
-
-* antTest -> permet de créer dans l’environnement de simulation une fourmi ouvrière au moyen de la touche ‘W’, ainsi qu’une fourmi soldat grâce à la touche ’S’
-
-* foodTest -> permet de voir apparaître spontanément des sources de nourriture dans l’environnement 
+* `application` → Application principale du projet. Il s'agit de la simulation complète dans son état final.  
+* `enemyTest` → Teste les combats entre fourmis soldats et prédateurs (termites) dans l’environnement.  
+* `termiteTest` → Permet de faire apparaître une termite dans l’environnement de simulation en appuyant sur la touche `T`.  
+* `pheromoneTest` → Crée un chemin de phéromones dans le cercle olfactif d'une fourmi témoin.  Affiche ensuite les phéromones perçues lorsque l'on appuie sur la touche `Q`.  
+* `anthillTest` → Fait apparaître les fourmilières et leurs fourmis associées. Les fourmis ouvrières sont capables de retrouver leur chemin vers la fourmilière en suivant les phéromones.
+* `antTest` → Ajoute manuellement des fourmis dans l’environnement
+   - Touche `W`: crée une **fourmi ouvrière**  
+   - Touche `S`: crée une **fourmi soldat**
+* `foodTest` → Fait apparaître spontanément des sources de nourriture dans l’environnement simulé.
 
 ---
 
 ## ⚙️ Commandes  
 
-* touche ‘C‘ -> permet d'affecter la température minimale(-10C) à l'environnement
-* touche ‘D‘ -> permet de mettre la simulation en mode debug
-* touche ‘F‘ -> permet d'affecter la température maximale(35°C) à l'environnement
-* touche ‘M‘ -> permet la création de l'environnement tel qu'il est configuré dans le fichier *res/map1.map*
-* touche ‘N‘ -> permet d'affecter la température usuelle à l'environnement (20°C)
-* touche ‘Q‘ -> permet d'observer l'affichage des phéromones perçues par la fourmi
-* touche ‘R‘ -> reset les stats et l'environnement
-* touche ‘S‘ -> permet de créer une fourmi soldat
-* touche ‘T‘ -> permet d'ajouter une termite
-* touche ‘W‘ -> permet de créer une fourmi ouvrière
-* touche ‘Y‘ -> permet de changer la température de l'environnement
-* touche ‘Z‘ -> enregistre les données de la simulation en cours dans un fichier nommé map_saved.map
+* touche `C` → affecte la température minimale (-10°C) à l'environnement
+* touche `N` → affecte la température usuelle (20°C) à l'environnement
+* touche `F` → affecte la température maximale (35°C) à l'environnement
+* touche `Y` → permet de changer la température de l'environnement
+* touche `Q` → permet d'observer l'affichage des phéromones perçues par la fourmi
+* touche `W` → crée une fourmi ouvrière
+* touche `S` → crée une fourmi soldat
+* touche `T` → ajoute une termite  
 
-* touche ‘espace‘ -> permet de mettre la simulation en pause
-* touche ‘escape‘ -> permet de fermer la simulation
+* touche `M` → crée l'environnement tel qu'il est configuré dans le fichier `res/map1.map`
+* touche `espace` → met la simulation en pause
+* touche `D` → met la simulation en mode debug
+* touche `R` → reset les stats et l'environnement
+* touche `Z` → enregistre les données de la simulation en cours dans un fichier nommé `map_saved.map`
+* touche `escape` → ferme la simulation  
  
-* touches ‘PgUp‘ et ‘PgDown‘ -> permettent de basculer sur les différents graph représentant l'évolution de la simulation
+* touches `PgUp` et `PgDown` → permettent de basculer sur les différents graph représentant l'évolution de la simulation
 
 ---
 
 ## 📝 Modification de Conception :
 
-Le codage du projet a été réalisé en adéquation avec l’énoncé du projet.
+L’implémentation du projet a été conduite en accord avec les spécifications fournies dans l’énoncé.
 
 ---
 
-## 📚 Extensions :
+## ✨ Fonctionalités étendues de la simulation
 
-Nous avons élaboré une extension permettant de **réduire la taille de la nourriture** et de la faire changer de texture en dessous d'une quantité seuil (on la considère comme déshydratée)
+Nous avons implémenté plusieurs extensions afin d'enrichir le réalisme et la complexité de la simulation. Voici les principales améliorations:
 
-De plus, nous avons aussi codé une extension permettant la **mémorisation de points de reprises**. Ainsi, le fait d'appuyer sur la touche 'Z' permet de mémoriser dans un fichier un point de reprise correspondant à l'état courant de la simulation.
-
-On a aussi fait en sorte que la **température ait une influence sur l'environnement** : Elle affecte les forces de combat et les vitesses des animaux. En période de gel, tout l'environnement se freeze. 
- 
-Nous avons aussi introduit la **notion d'insecticides**, générés automatiquement dans l’environnement à la manière des sources de nourriture (classe InsecticideGenerator héritée d’une classe générale Generator) et qui polluent les sources de nourriture et les fourmillières à proximité et tuent tous les animaux à proximité. 
- 
-Par conséquent, les fourmis ouvrières qui collectent de la nourriture contaminée meurent et les fourmilières exposées diminuent en taille puis disparaissent.
- 
-Enfin nous avons mis en place un **cycle Jour/Nuit** au moyen du type énuméré. Toutes les 5secondes de simulation, le cycle change et le fond de l'environnement se modifie en conséquence.
+* Réduction et déshydratation de la nourriture → lorsque la quantité de nourriture passe sous un seuil critique, sa **taille diminue automatiquement** et sa **texture change**: elle est alors considérée comme **déshydratée**.
+* Mémorisation de points de reprise → Une fonctionnalité de **sauvegarde d'état** a été ajoutée.  
+- Appuyer sur la touche `Z` permet d’enregistrer l’état courant de la simulation dans un fichier.
+- Cela permet de **reprendre la simulation** à partir de ce point ultérieurement.
+* Influence de la température → la **température ambiante** affecte directement l’environnement:
+- Elle modifie les **forces de combat** et les **vitesses de déplacement** des animaux.
+- En période de **gel**, **l’environnement entier se fige** (freeze).
+* Introduction des insecticides → nous avons introduit des **zones d’insecticides** générées automatiquement, similaires aux sources de nourriture.
+- Générées via la classe `InsecticideGenerator` (hérite de `Generator`)
+- Elles **polluent** les sources de nourriture et les fourmilières à proximité
+- Elles **éliminent tous les animaux** se trouvant dans leur zone d'effet  
+⚠️ Conséquences :
+- Les **fourmis ouvrières** ramassant de la nourriture contaminée **meurent**
+- Les **fourmilières exposées rétrécissent** progressivement jusqu’à **disparaître**
+* Cycle Jour / Nuit → un **cycle jour/nuit** a été implémenté à l’aide d’un **type énuméré**.
+- Le cycle change **toutes les 5 secondes de simulation**
+- Le **fond visuel** de l’environnement est modifié en fonction du moment du cycle
 
 ---
 
