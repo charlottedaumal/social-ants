@@ -87,7 +87,7 @@ L’implémentation du projet a été conduite en accord avec les spécification
 
 ---
 
-## ✨ Fonctionalités étendues de la simulation
+## ✨ Fonctionalités Additionnelles
 
 Nous avons implémenté plusieurs extensions afin d'enrichir le réalisme et la complexité de la simulation. Voici les principales améliorations:
 
