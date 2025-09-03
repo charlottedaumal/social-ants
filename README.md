@@ -64,14 +64,18 @@ Le projet inclut plusieurs exécutables permettant de tester individuellement di
 * touche `Q` → permet d'observer l'affichage des phéromones perçues par la fourmi
 * touche `W` → crée une fourmi ouvrière
 * touche `S` → crée une fourmi soldat
-* touche `T` → ajoute une termite <br> 
+* touche `T` → ajoute une termite
+
+<br> 
 
 * touche `M` → crée l'environnement tel qu'il est configuré dans le fichier `res/map1.map`
 * touche `espace` → met la simulation en pause
 * touche `D` → met la simulation en mode debug
 * touche `R` → reset les stats et l'environnement
 * touche `Z` → enregistre les données de la simulation en cours dans un fichier nommé `map_saved.map`
-* touche `escape` → ferme la simulation <br>
+* touche `escape` → ferme la simulation
+
+<br>
 
 * touches `PgUp` et `PgDown` → permettent de basculer sur les différents graph représentant l'évolution de la simulation
 
