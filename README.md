@@ -1,4 +1,4 @@
-# Les Fourmis : Simulation d'un Système Auto-Organisé
+# The Ants: A Simulation of an Auto-Organized System
 
 **Authors:** Charlotte Daumal & Clemence Kiehl  
 **Context:** This project was completed as part of the *Programmation Orienté Objet* course taught by Prof. Jamila Sam at EPFL  
@@ -10,7 +10,7 @@
 
 ---
 
-## Description
+## 📘 Description
  
 Notre programme est une simulation informatique sur la base d’un modèle constitué d’un monde, de fourmilières et de prédateurs (termites)
 Dans le cadre notre modélisation nous étudions le comportement de 2 types de fourmis: les fourmis ouvrières dont le rôle est de ramener de la nourriture (générée automatiquement) à la fourmilière, et les fourmis soldats qui pourront être engagées dans des combats avec des prédateurs (termites).
@@ -19,7 +19,7 @@ La simulation a donc pour but final d’illustrer l’auto-organisation d’une 
 
 ---
 
-## Compilation & Execution :
+## ⚙️ Compilation & Execution :
 
 Ce projet utilise CMake pour compiler 
 
@@ -33,7 +33,7 @@ dans QTCreator:
 
 ---
 
-## Cibles Principale : 
+## 🎯 Cibles Principale : 
 
 * application -> correspond à l’application finale.
 
@@ -51,7 +51,7 @@ dans QTCreator:
 
 ---
 
-## Commandes :
+## 💻 Commandes :
 
 * touche **'C'** -> permet d'affecter la température minimale(-10C) à l'environnement
 * touche **'D'** -> permet de mettre la simulation en mode debug
@@ -73,13 +73,13 @@ dans QTCreator:
 
 ---
 
-## Modification de Conception :
+## 📝 Modification de Conception :
 
 Le codage du projet a été réalisé en adéquation avec l’énoncé du projet.
 
 ---
 
-## Extensions :
+## 📚 Extensions :
 
 Nous avons élaboré une extension permettant de **réduire la taille de la nourriture** et de la faire changer de texture en dessous d'une quantité seuil (on la considère comme déshydratée)
 
@@ -87,11 +87,11 @@ De plus, nous avons aussi codé une extension permettant la **mémorisation de p
 
 On a aussi fait en sorte que la **température ait une influence sur l'environnement** : Elle affecte les forces de combat et les vitesses des animaux. En periode de gel, tout l'environnement se freeze. 
  
- Nous avons aussi introduit la **notion d'insecticides**, générés automatiquement dans l’environnement à la manière des sources de nourriture (classe InsecticideGenerator héritée d’une classe générale Generator) et qui polluent les sources de nourriture et les fourmillières à proximité et tuent tous les animaux à proximité. 
+Nous avons aussi introduit la **notion d'insecticides**, générés automatiquement dans l’environnement à la manière des sources de nourriture (classe InsecticideGenerator héritée d’une classe générale Generator) et qui polluent les sources de nourriture et les fourmillières à proximité et tuent tous les animaux à proximité. 
  
- Par conséquent, les fourmis ouvrières qui collectent de la nourriture contaminée meurent et les fourmilières exposées diminuent en taille puis disparaissent.
+Par conséquent, les fourmis ouvrières qui collectent de la nourriture contaminée meurent et les fourmilières exposées diminuent en taille puis disparaissent.
  
- Enfin nous avons mis en place un **cycle Jour/Nuit** au moyen du type énuméré. Toutes les 5secondes de simulation, le cycle change et le fond de l'environnement se modifie en conséquence.
+Enfin nous avons mis en place un **cycle Jour/Nuit** au moyen du type énuméré. Toutes les 5secondes de simulation, le cycle change et le fond de l'environnement se modifie en conséquence.
 
 ---
 
