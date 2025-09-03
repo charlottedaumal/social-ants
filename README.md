@@ -105,15 +105,15 @@ Nous avons implémenté plusieurs extensions afin d'enrichir le réalisme et la 
 * Introduction des insecticides → nous avons introduit des **zones d’insecticides** générées automatiquement, similaires aux sources de nourriture.
   - Générées via la classe `InsecticideGenerator` (hérite de `Generator`)
   - Elles **polluent** les sources de nourriture et les fourmilières à proximité.
-  - Elles **éliminent tous les animaux** se trouvant dans leur zone d'effet. 
-⚠️ Conséquences :
-  - Les **fourmis ouvrières** ramassant de la nourriture contaminée **meurent**.
-  - Les **fourmilières exposées rétrécissent** progressivement jusqu’à **disparaître**.  
+  - Elles **éliminent tous les animaux** se trouvant dans leur zone d'effet.
+  - ⚠️ Conséquences :
+     - Les **fourmis ouvrières** ramassant de la nourriture contaminée **meurent**.
+     - Les **fourmilières exposées rétrécissent** progressivement jusqu’à **disparaître**.  
 
 
 * Cycle Jour / Nuit → un **cycle jour/nuit** a été implémenté à l’aide d’un **type énuméré**.
-  - Le cycle change **toutes les 5 secondes de simulation**
-  - Le **fond visuel** de l’environnement est modifié en fonction du moment du cycle
+  - Le cycle change **toutes les 5 secondes de simulation**.
+  - Le **fond visuel** de l’environnement est modifié en fonction du moment du cycle.
 
 ---
 
