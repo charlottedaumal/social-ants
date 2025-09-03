@@ -66,12 +66,14 @@ Le projet inclut plusieurs exécutables permettant de tester individuellement di
 * touche `S` → crée une fourmi soldat
 * touche `T` → ajoute une termite  
 
+
 * touche `M` → crée l'environnement tel qu'il est configuré dans le fichier `res/map1.map`
 * touche `espace` → met la simulation en pause
 * touche `D` → met la simulation en mode debug
 * touche `R` → reset les stats et l'environnement
 * touche `Z` → enregistre les données de la simulation en cours dans un fichier nommé `map_saved.map`
-* touche `escape` → ferme la simulation  
+* touche `escape` → ferme la simulation 
+
  
 * touches `PgUp` et `PgDown` → permettent de basculer sur les différents graph représentant l'évolution de la simulation
 
@@ -88,19 +90,27 @@ L’implémentation du projet a été conduite en accord avec les spécification
 Nous avons implémenté plusieurs extensions afin d'enrichir le réalisme et la complexité de la simulation. Voici les principales améliorations:
 
 * Réduction et déshydratation de la nourriture → lorsque la quantité de nourriture passe sous un seuil critique, sa **taille diminue automatiquement** et sa **texture change**: elle est alors considérée comme **déshydratée**.
+
+ 
 * Mémorisation de points de reprise → Une fonctionnalité de **sauvegarde d'état** a été ajoutée.  
 - Appuyer sur la touche `Z` permet d’enregistrer l’état courant de la simulation dans un fichier.
 - Cela permet de **reprendre la simulation** à partir de ce point ultérieurement.
+
+
 * Influence de la température → la **température ambiante** affecte directement l’environnement:
 - Elle modifie les **forces de combat** et les **vitesses de déplacement** des animaux.
 - En période de **gel**, **l’environnement entier se fige** (freeze).
+
+
 * Introduction des insecticides → nous avons introduit des **zones d’insecticides** générées automatiquement, similaires aux sources de nourriture.
 - Générées via la classe `InsecticideGenerator` (hérite de `Generator`)
-- Elles **polluent** les sources de nourriture et les fourmilières à proximité
-- Elles **éliminent tous les animaux** se trouvant dans leur zone d'effet  
+- Elles **polluent** les sources de nourriture et les fourmilières à proximité.
+- Elles **éliminent tous les animaux** se trouvant dans leur zone d'effet. 
 ⚠️ Conséquences :
-- Les **fourmis ouvrières** ramassant de la nourriture contaminée **meurent**
-- Les **fourmilières exposées rétrécissent** progressivement jusqu’à **disparaître**
+- Les **fourmis ouvrières** ramassant de la nourriture contaminée **meurent**.
+- Les **fourmilières exposées rétrécissent** progressivement jusqu’à **disparaître**.
+
+
 * Cycle Jour / Nuit → un **cycle jour/nuit** a été implémenté à l’aide d’un **type énuméré**.
 - Le cycle change **toutes les 5 secondes de simulation**
 - Le **fond visuel** de l’environnement est modifié en fonction du moment du cycle
